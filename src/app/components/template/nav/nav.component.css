@@ -33,3 +33,8 @@
 .mat-tree-node > button:focus{
   outline: none;
 }
+
+.content{
+  padding: 16px;
+  background-color: #FFF;
+}

@@ -9,7 +9,7 @@
 }
 
 .logo, .header > span{
-  color: #E7EFDD;
+  color: #FFF;
 }
 
 form{
@@ -22,7 +22,7 @@ form > .searchInput{
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  background-color: #E7EFDD;
+  background-color: #FFF;
 }
 
 .mat-toolbar{

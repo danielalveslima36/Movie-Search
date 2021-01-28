@@ -17,16 +17,17 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './components/template/footer/footer.component';
-
-
-
-
+import { HomeComponent } from './components/pages/home/home.component';
+import {CarouselModule} from 'ngx-owl-carousel-o';
+import { MatCardModule } from '@angular/material/card';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +41,10 @@ import { FooterComponent } from './components/template/footer/footer.component';
     MatListModule,
     MatTreeModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    CarouselModule,
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav class="sidenav" [disableClose]="true" mode="side" opened fixedInViewport="true" fixedBottomGap="35" fixedTopGap="64">
     <mat-nav-list>
-      <a mat-list-item><i class="material-icons" id="item-home-nav">home</i>Home</a>
+      <a mat-list-item routerLink="/"><i class="material-icons" id="item-home-nav">home</i>Home</a>
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
         <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
           <li class="mat-tree-node">
@@ -28,7 +28,9 @@
       </mat-tree>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content></mat-sidenav-content>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
 
 
