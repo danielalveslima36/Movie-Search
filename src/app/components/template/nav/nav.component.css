@@ -1,0 +1,35 @@
+.sidenav{
+  background-color: #3F51B5;
+  width: 205px;
+  position: fixed;
+}
+
+.sidenav a{
+  color: #E7EFDD
+}
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  background-color: #3F51B5;
+}
+
+#item-home-nav{
+  margin-right: 10px;
+}
+
+.mat-tree-node{
+  color: #E7EFDD;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.mat-tree-node > button:focus{
+  outline: none;
+}

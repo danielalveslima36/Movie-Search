@@ -1,0 +1,25 @@
+.footer{
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer span{
+  font-size: 1rem;
+  color: #E7EFDD;
+}
+
+.footer a{
+  font-size: 0.8rem;
+  color: #E7EFDD;
+}
+
+.footer img{
+  max-height: 30px;
+}
+
+.mat-toolbar{
+  background-color: #0E0B16;
+  height: 35px;
+}
