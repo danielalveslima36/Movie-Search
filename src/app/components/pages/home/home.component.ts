@@ -1,3 +1,4 @@
+import { Tv } from './../../../model/tv';
 import { Movie } from '../../../model/movie';
 import { MovieService } from './../../../services/movie.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,14 +11,51 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeComponent implements OnInit {
 
-  private trendingMovie: Movie[] = [];
+  trendingMovie: Movie[] = [];
+  trendingTv: Tv[] = [];
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    margin: 20,
+    dots: true,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: false
+  }
   constructor(private movieService: MovieService) {
    }
 
   ngOnInit(): void {
-    this.movieService.getTrendingMovies().subscribe((movies) => {
-      this.trendingMovie = movies["results"]
-      console.log(this.trendingMovie)
+    this.loadMovies()
+    this.loadTv()
+  }
+
+  loadMovies(){
+    this.movieService.getTrendingMovies().subscribe((movie) => {
+      this.trendingMovie = movie;
+    })
+  }
+
+  loadTv(){
+    this.movieService.getTrendingTv().subscribe((tv) => {
+      this.trendingTv = tv;
     })
   }
 

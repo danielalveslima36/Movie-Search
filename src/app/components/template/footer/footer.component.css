@@ -3,10 +3,11 @@
   position: fixed;
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .footer span{
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #E7EFDD;
 }
 
@@ -16,10 +17,10 @@
 }
 
 .footer img{
-  max-height: 30px;
+  max-height: 25px;
 }
 
 .mat-toolbar{
   background-color: #0E0B16;
-  height: 35px;
+  height: 30px;
 }

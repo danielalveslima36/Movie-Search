@@ -1,6 +1,37 @@
 <mat-card class="home mat-elevation-z3">
-  <mat-card-title class="title">Trending Movies</mat-card-title>
-  <mat-card-subtitle class="subtitle">
+  <mat-card-title class="titlecard">Trending Movies</mat-card-title>
+  <mat-card-content>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let movie of trendingMovie">
+        <ng-template carouselSlide >
+          <img [src]="'https://image.tmdb.org/t/p/w500' + movie.backdrop_path">
+          <div class="titleMovie">
+            <span>{{movie.original_title}}</span>
+          </div>
+          <div class="dateMovie">
+            <span>{{movie.release_date}}</span>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </mat-card-content>
+</mat-card>
 
-  </mat-card-subtitle>
+<mat-card class="home mat-elevation-z3">
+  <mat-card-title class="titlecard">Trending Movies</mat-card-title>
+  <mat-card-content>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let tv of trendingTv">
+        <ng-template carouselSlide >
+          <img [src]="'https://image.tmdb.org/t/p/w500' + tv.backdrop_path">
+          <div class="titleMovie">
+            <span>{{tv.original_name}}</span>
+          </div>
+          <div class="dateMovie">
+            <span>{{tv.first_air_date}}</span>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </mat-card-content>
 </mat-card>

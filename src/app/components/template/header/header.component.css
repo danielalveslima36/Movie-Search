@@ -1,15 +1,14 @@
 .logo{
   font-size: 30px;
   margin-right: 15px;
+  color: #FFF;
 }
 
 .header > span{
   font-size: 20px;
   margin-top: 5px;
-}
-
-.logo, .header > span{
   color: #FFF;
+  background-color: #0E0B16;
 }
 
 form{
@@ -25,7 +24,7 @@ form > .searchInput{
   background-color: #FFF;
 }
 
-.mat-toolbar{
+.header{
   background-color: #0E0B16;
 }
 
