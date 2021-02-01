@@ -26,5 +26,8 @@ form > .searchInput{
 
 .header{
   background-color: #0E0B16;
+  top: 0;
+  position: fixed;
+  z-index: 2;
 }
 
